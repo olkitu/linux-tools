@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [[ -z "$1" ]]; then
-  echo "Syntax: $0 parameter, example $0 -v"
+  echo "Syntax: $0 serverless <parameters>, example serverless $0 -v"
   exit 1
 else
-  docker run --rm -v "$HOME/.aws:/root/.aws:ro" -v "$(pwd):/app" ghcr.io/olkitu/serverless-deployer serverless $@
+  docker run --rm -v "$HOME/.aws:/root/.aws:ro" -v "$(pwd):/app" ghcr.io/olkitu/serverless-deployer $@
 fi
