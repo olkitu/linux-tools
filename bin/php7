@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ -z "$1" ]]; then
+  echo "Syntax: $0 parameter, example $0 -v"
+  exit 1
+else
+  docker run --rm -v "$(pwd):/app" ghcr.io/olkitu/composer-builder:7.0 $1
+fi
