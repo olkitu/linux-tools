@@ -4,5 +4,5 @@ if [[ -z "$1" ]]; then
   echo "Syntax: $0 parameter, example $0 -v"
   exit 1
 else
-  docker run -it --rm -v "$HOME/.aws:/root/.aws/ro" -v "$(pwd):/app" ghcr.io/olkitu/composer-builder:8.0 $@
+  docker run -it --rm -v "$HOME/.aws:/root/.aws/ro" -v "$(pwd):/app" ghcr.io/olkitu/serverless-deployer:8.0 $@
 fi
